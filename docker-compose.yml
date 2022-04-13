@@ -1,0 +1,23 @@
+version: "3.9"
+services:
+  web:
+    image: YOUR_REGISTRY/YOUR_REPO/YOUR_WEB:TAG
+    ports:
+      - "80:80"
+    env_file:
+      - .env
+    depends_on:
+      api:
+        condition: service_healthy
+  api:
+    image: YOUR_REGISTRY/YOUR_REPO/YOUR_API:TAG
+    ports:
+      - "8001:80"
+    env_file:
+      - .env
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:80/ready"]
+      interval: 10s
+      timeout: 1m30s
+      retries: 5
+      start_period: 10s

@@ -1,0 +1,244 @@
+{
+    "fields": [
+      {
+        "name": "articleId",
+        "type": "Edm.String",
+        "facetable": false,
+        "filterable": true,
+        "key": true,
+        "retrievable": true,
+        "searchable": true,
+        "sortable": true,
+        "analyzer": "en.lucene",
+        "indexAnalyzer": null,
+        "searchAnalyzer": null,
+        "synonymMaps": [],
+        "fields": []
+      },
+      {
+        "name": "type",
+        "type": "Edm.String",
+        "facetable": true,
+        "filterable": true,
+        "key": false,
+        "retrievable": true,
+        "searchable": true,
+        "sortable": true,
+        "analyzer": "en.lucene",
+        "indexAnalyzer": null,
+        "searchAnalyzer": null,
+        "synonymMaps": [],
+        "fields": []
+      },
+      {
+        "name": "name",
+        "type": "Edm.String",
+        "facetable": false,
+        "filterable": true,
+        "key": false,
+        "retrievable": true,
+        "searchable": true,
+        "sortable": true,
+        "analyzer": "en.lucene",
+        "indexAnalyzer": null,
+        "searchAnalyzer": null,
+        "synonymMaps": [],
+        "fields": []
+      },
+      {
+        "name": "description",
+        "type": "Edm.String",
+        "facetable": false,
+        "filterable": true,
+        "key": false,
+        "retrievable": true,
+        "searchable": true,
+        "sortable": true,
+        "analyzer": "en.lucene",
+        "indexAnalyzer": null,
+        "searchAnalyzer": null,
+        "synonymMaps": [],
+        "fields": []
+      },   
+      {
+        "name": "quality",
+        "type": "Collection(Edm.String)",
+        "facetable": true,
+        "filterable": true,
+        "retrievable": true,
+        "searchable": true,
+        "analyzer": "en.lucene",
+        "indexAnalyzer": null,
+        "searchAnalyzer": null,
+        "synonymMaps": [],
+        "fields": []
+      },
+      {
+        "name": "style",
+        "type": "Collection(Edm.String)",
+        "facetable": true,
+        "filterable": true,
+        "retrievable": true,
+        "searchable": true,
+        "analyzer": "en.lucene",
+        "indexAnalyzer": null,
+        "searchAnalyzer": null,
+        "synonymMaps": [],
+        "fields": []
+      },
+      {
+        "name": "gender",
+        "type": "Edm.String",
+        "facetable": true,
+        "filterable": true,
+        "retrievable": true,
+        "searchable": true,
+        "analyzer": "en.lucene",
+        "indexAnalyzer": null,
+        "searchAnalyzer": null,
+        "synonymMaps": [],
+        "fields": []
+      },
+      {
+        "name": "colors",
+        "type": "Collection(Edm.String)",
+        "facetable": true,
+        "filterable": true,
+        "retrievable": true,
+        "searchable": true,
+        "analyzer": "en.lucene",
+        "indexAnalyzer": null,
+        "searchAnalyzer": null,
+        "synonymMaps": [],
+        "fields": []
+      }
+    ],
+    "suggesters": [
+    ],
+    "scoringProfiles": [
+      {
+        "name": "TagBoosting",
+        "functions": [
+          {
+            "fieldName": "type",
+            "freshness": null,
+            "interpolation": "linear",
+            "magnitude": null,
+            "distance": null,
+            "tag": {
+              "tagsParameter": "type"
+            },
+            "type": "tag",
+            "boost": 10
+          },
+          {
+            "fieldName": "colors",
+            "freshness": null,
+            "interpolation": "linear",
+            "magnitude": null,
+            "distance": null,
+            "tag": {
+              "tagsParameter": "colors"
+            },
+            "type": "tag",
+            "boost": 10
+          },
+          {
+            "fieldName": "gender",
+            "freshness": null,
+            "interpolation": "linear",
+            "magnitude": null,
+            "distance": null,
+            "tag": {
+              "tagsParameter": "gender"
+            },
+            "type": "tag",
+            "boost": 10
+          },
+          {
+            "fieldName": "quality",
+            "freshness": null,
+            "interpolation": "linear",
+            "magnitude": null,
+            "distance": null,
+            "tag": {
+              "tagsParameter": "quality"
+            },
+            "type": "tag",
+            "boost": 10
+          },
+          {
+            "fieldName": "style",
+            "freshness": null,
+            "interpolation": "linear",
+            "magnitude": null,
+            "distance": null,
+            "tag": {
+              "tagsParameter": "style"
+            },
+            "type": "tag",
+            "boost": 10
+          },
+          {
+            "fieldName": "name",
+            "freshness": null,
+            "interpolation": "linear",
+            "magnitude": null,
+            "distance": null,
+            "tag": {
+              "tagsParameter": "name"
+            },
+            "type": "tag",
+            "boost": 10
+          }
+        ],
+        "functionAggregation": "sum"
+      }
+    ],
+    "defaultScoringProfile": null,
+    "corsOptions": null,
+    "analyzers": [],
+    "charFilters": [],
+    "tokenFilters": [],
+    "tokenizers": [],
+    "similarity": {
+      "@odata.type": "#Microsoft.Azure.Search.BM25Similarity",
+      "k1": null,
+      "b": null
+    },
+    "encryptionKey": null,
+    "semantic": {
+      "configurations": [
+        {
+          "name": "search-config",
+          "prioritizedFields": {
+            "titleField": {
+              "fieldName": "name"
+            },
+            "prioritizedContentFields": [
+              {
+                "fieldName": "type"
+              },
+              {
+                "fieldName": "description"
+              }
+            ],
+            "prioritizedKeywordsFields": [
+              {
+                "fieldName": "colors"
+              },
+              {
+                "fieldName": "style"
+              },
+              {
+                "fieldName": "quality"
+              },
+              {
+                "fieldName": "gender"
+              }
+            ]
+          }
+        }
+      ]
+    }
+}
