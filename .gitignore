@@ -1,0 +1,5 @@
+docker-api/code/data/*
+**/__pycache__/*
+docker-api/code/embeddings/*
+debug.log
+.env
