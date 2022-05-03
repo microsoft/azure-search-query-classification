@@ -28,6 +28,9 @@ The code is split into two different logical components to facilitate re-use and
 
 Both components are dockerized for easy deployment on multiple platforms and integration with existing applications. 
 
+## Statement of Purpose
+The purpose of this repository is to grow the understanding of using Large Language Models in Azure Cognitive Search by providing an example of implementation and references to support the [Microsoft Build conference in 2022](https://mybuild.microsoft.com/). It is not intended to be a released product. Therefore, this repository is not for discussing OpenAI API, Azure Cognitive Search or requesting new features.
+
 ## How semantic search changes the results set
 Let's see how semantic understanding changes the results set with a sample query.
 
