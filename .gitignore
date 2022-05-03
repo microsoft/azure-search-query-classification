@@ -1,0 +1,7 @@
+docker-api/code/data/articles
+docker-api/code/data/catalog
+docker-api/code/debug.log
+docker-api/code/embeddings
+docker-api/code/utilities
+docker-api/code/__pycache__
+docker-web/code/__pycache__
