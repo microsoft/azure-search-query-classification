@@ -46,7 +46,7 @@ You can easily compare the results in the following image.
 ## Requirements
 
 - [Azure Cognitive Search](https://docs.microsoft.com/en-us/azure/search/search-what-is-azure-search#how-to-get-started) with [Standard SKU and Semantic Search](https://docs.microsoft.com/en-us/azure/search/semantic-search-overview#enable-semantic-search)
-- [Python](https://wiki.python.org/moin/BeginnersGuide/Download)
+- [Python 3.8+](https://wiki.python.org/moin/BeginnersGuide/Download)
 - [Docker](https://docs.docker.com/get-started/)
 - Open AI API Key to make API calls 
 
