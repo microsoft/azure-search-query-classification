@@ -62,11 +62,16 @@ You can easily compare the results in the following image.
 5. Run `python local-run.py` to serve the backend and launch the web application.
 NOTE for MacOs users: by default no alias for python is defined. In this case, please run `python3 local-run.py`
 
-## Running the App Locally
-1. `git clone` the repo: `git clone https://github.com/microsoft/PROJECT_NAME` and open the project folder
+## Running the App Locally (with Docker)
+1. [Check whether Docker is running](https://docs.docker.com/config/daemon/#check-whether-docker-is-running)
+2. `git clone` the repo: `git clone https://github.com/microsoft/azure-search-query-classification` and open the project folder
 2. Create a `.env` file in the root directory of the project, copying the contents of the `.env.example` file [See Configure the .env file section](#configure-the-env-file)
-3. Run `docker build docker-api\. -t YOUR_REGISTRY/YOUR_REPO/YOUR_API:TAG` to create the server docker image
-4. Run `docker build docker-web\. -t YOUR_REGISTRY/YOUR_REPO/YOUR_WEB:TAG` to create the client docker image
+3. Create the server docker image
+    -   Windows users: Run `docker build docker-api\. -t YOUR_REGISTRY/YOUR_REPO/YOUR_API:TAG`
+    -   MacOs users: Run `docker build docker-api/. -t YOUR_REGISTRY/YOUR_REPO/YOUR_API:TAG`
+4. Create the client docker image
+    -   Windows users: Run `docker build docker-web\. -t YOUR_REGISTRY/YOUR_REPO/YOUR_WEB:TAG` 
+    -   MacOs users: Run `docker build docker-web/. -t YOUR_REGISTRY/YOUR_REPO/YOUR_WEB:TAG` 
 5. Modify the `docker-compose.yml` to point to your images tags as defined in step 3 and step 4
 6. Run `docker compose up` to serve the backend and launch the web application.
 
