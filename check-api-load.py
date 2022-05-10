@@ -18,4 +18,5 @@ while True:
       break
 
 logging.info("Server ready to serve requests")
-os.system('streamlit run ../../docker-web/code/ui.py local_run')
+code_path = os.path.join("..","..","docker-web","code","ui.py")
+os.system(f'streamlit run {code_path} local_run')
