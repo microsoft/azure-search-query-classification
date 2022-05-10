@@ -81,7 +81,7 @@ You can easily compare the results in the following image.
 ||||
 | SentenceTransformer | msmarco-distilbert-dot-v5, all-mpnet-base-v2, nq-distilbert-base-v1, all-MiniLM-L6-v2| List of all the models for compute the embeddings. You can add any [Sentence Transformers](https://huggingface.co/sentence-transformers) |
 | GPT_3 | curie-search-query-msft,babbage-search-query-msft,ada-search-query-msft | List of all the models for compute the embeddings. You can add any [GPT-3 embedding model](https://beta.openai.com/docs/guides/embeddings) |
-| OPENAI_API_KEY | YOUR_OPEAN_API_KEY | [OpenAI GPT-3 Key](https://beta.openai.com/docs/api-reference/authentication) |
+| OPENAI_API_KEY | YOUR_OPENAI_API_KEY (which can be found at https://beta.openai.com/account/api-keys) | [OpenAI GPT-3 Key](https://beta.openai.com/docs/api-reference/authentication) |
 ||||
 ||||
 | fields | <pre> [<br>    {<br>      "name": "name",<br>      "type": "Edm.String"<br>    },<br>    {<br>      "name": "quality",<br>      "type": "Collection(Edm.String)"<br>    },<br>    {<br>      "name": "style",<br>      "type": "Collection(Edm.String)"<br>    },<br>    {<br>      "name": "gender",<br>      "type": "Edm.String"<br>    },<br>    {<br>      "name": "colors",<br>      "type": "Collection(Edm.String)"<br>    },<br>    {<br>      "name": "type",<br>      "type": "Edm.String"<br>    }<br> ] </pre>| JSON version of all the fileds to be used for computing embeddings |
