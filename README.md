@@ -51,11 +51,16 @@ You can easily compare the results in the following image.
 - Open AI API Key to make API calls 
 
 ## Running the App Locally (without Docker)
-1. `git clone` the repo: `git clone https://github.com/microsoft/PROJECT_NAME` and open the project folder
-2. Create a `.env` file in the root directory of the project, copying the contents of the `.env.example` file [See Configure the .env file section](#configure-the-env-file)
-3. Run `pip install -r docker-api\code\requirements.txt` to gather the projects' dependencies for backend component
-4. Run `pip install -r docker-web\code\requirements.txt` to gather the projects' dependencies for frontend component
+1. `git clone` the repo: `git clone https://github.com/microsoft/azure-search-query-classification` and open the project folder
+2. Create a `.env` file in the root directory of the project, copying the contents of the `.env.example` file [See Configure the .env file section](#configure-the-env-file) 
+3. Gather the projects' dependencies for the backend component
+    - Windows users: Run `pip install -r docker-api\code\requirements.txt` 
+    - MacOs users: Run `pip install -r docker-api/code/requirements.txt`
+4. Gather the projects' dependencies for the frontend component
+    - Windows users: Run `pip install -r docker-web\code\requirements.txt`
+    - MacOs users: Run `pip install -r docker-web/code/requirements.txt` 
 5. Run `python local-run.py` to serve the backend and launch the web application.
+NOTE for MacOs users: by default no alias for python is defined. In this case, please run `python3 local-run.py`
 
 ## Running the App Locally
 1. `git clone` the repo: `git clone https://github.com/microsoft/PROJECT_NAME` and open the project folder
