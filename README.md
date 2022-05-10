@@ -67,13 +67,15 @@ You can easily compare the results in the following image.
 
 ## Configure the .env file
 
+Please use your own settings in the fields marked as "TO UPDATE" in the Note column in the following table.
+
 <br>
 
 | App Setting         | Value                           | Note                                                             |
 |---------------------|---------------------------------|------------------------------------------------------------------|  
-| search_service |YOUR_AZURE_COGNITIVE_SEARCH_SERVICE |[Azure Cognitive Search service name](https://docs.microsoft.com/en-us/azure/search/search-create-service-portal#name-the-service) e.g. https://XXX.search.windows.net use just XXX.|
-| index_name | YOUR_AZURE_COGNITIVE_SEARCH_INDEX |  |
-| api_key | YOUR_AZURE_COGNITIVE_SEARCH_API_KEY | [Azure Cognitive Search Admin Key](https://docs.microsoft.com/en-us/azure/search/search-create-service-portal#get-a-key-and-url-endpoint) |
+| search_service |YOUR_AZURE_COGNITIVE_SEARCH_SERVICE | TO UPDATE [Azure Cognitive Search service name](https://docs.microsoft.com/en-us/azure/search/search-create-service-portal#name-the-service) e.g. https://XXX.search.windows.net use just XXX.|
+| index_name | YOUR_AZURE_COGNITIVE_SEARCH_INDEX | TO UPDATE A new index that will be created by the code in your Azure Cognitive Search resource |
+| api_key | YOUR_AZURE_COGNITIVE_SEARCH_API_KEY | TO UPDATE [Azure Cognitive Search Admin Key](https://docs.microsoft.com/en-us/azure/search/search-create-service-portal#get-a-key-and-url-endpoint) |
 | api_version| 2021-04-30-Preview | [Azure Cognitive Search API Version](https://docs.microsoft.com/en-us/azure/search/search-api-versions) |
 | LoadSampleData | true | Load sample data in Azure Cognitive Search index |
 | sample_data_url | | Link to download sample data if LoadSampleData is true |
@@ -81,7 +83,7 @@ You can easily compare the results in the following image.
 ||||
 | SentenceTransformer | msmarco-distilbert-dot-v5, all-mpnet-base-v2, nq-distilbert-base-v1, all-MiniLM-L6-v2| List of all the models for compute the embeddings. You can add any [Sentence Transformers](https://huggingface.co/sentence-transformers) |
 | GPT_3 | text-search-curie-query-001, text-search-babbage-query-001, text-search-ada-query-001 | List of all the models for compute the embeddings. You can add any [GPT-3 embedding model](https://beta.openai.com/docs/guides/embeddings) |
-| OPENAI_API_KEY | YOUR_OPENAU_API_KEY | [OpenAI GPT-3 Key](https://beta.openai.com/docs/api-reference/authentication) |
+| OPENAI_API_KEY | YOUR_OPENAI_API_KEY | TO UPDATE [OpenAI GPT-3 Key](https://beta.openai.com/docs/api-reference/authentication) |
 ||||
 ||||
 | fields | <pre> [<br>    {<br>      "name": "name",<br>      "type": "Edm.String"<br>    },<br>    {<br>      "name": "quality",<br>      "type": "Collection(Edm.String)"<br>    },<br>    {<br>      "name": "style",<br>      "type": "Collection(Edm.String)"<br>    },<br>    {<br>      "name": "gender",<br>      "type": "Edm.String"<br>    },<br>    {<br>      "name": "colors",<br>      "type": "Collection(Edm.String)"<br>    },<br>    {<br>      "name": "type",<br>      "type": "Edm.String"<br>    }<br> ] </pre>| JSON version of all the fileds to be used for computing embeddings |
