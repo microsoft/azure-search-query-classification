@@ -84,7 +84,7 @@ def get_scoring_boosts(search_settings={}):
     return boost_scores
 
 # Modify Tag Boosting Scoring Profile
-def update_scoring_profile(search_settings={}):
+def update_scoring_profile(**search_settings):
     url = f"https://{search_settings['search_service']}.search.windows.net/indexes/{search_settings['index_name']}?api-version={search_settings['api_version']}"
 
     headers = {

@@ -120,11 +120,11 @@ try:
         st.write('Boosting values')
         col1, col2, col3, col4 = st.columns([1,1,1,1])
         with col1:
-            boosting_values  = list(map(lambda x: {"key": x, "value" : st.number_input(f"{x}", value=boosts_values[x], min_value=0.01, on_change=utils.update_scoring_profile, args=search_settings, key=x)}, boost_selections[0:3]))
+            boosting_values  = list(map(lambda x: {"key": x, "value" : st.number_input(f"{x}", value=boosts_values[x], min_value=0.01, on_change=utils.update_scoring_profile, kwargs=search_settings, key=x)}, boost_selections[0:3]))
         with col2:
-            boosting_values += list(map(lambda x: {"key": x, "value" : st.number_input(f"{x}", value=boosts_values[x], min_value=0.01, on_change=utils.update_scoring_profile, args=search_settings, key=x)}, boost_selections[3:6]))
+            boosting_values += list(map(lambda x: {"key": x, "value" : st.number_input(f"{x}", value=boosts_values[x], min_value=0.01, on_change=utils.update_scoring_profile, kwargs=search_settings, key=x)}, boost_selections[3:6]))
         with col3:
-            boosting_values += list(map(lambda x: {"key": x, "value" : st.number_input(f"{x}", value=boosts_values[x], min_value=0.01, on_change=utils.update_scoring_profile, args=search_settings, key=x)}, boost_selections[6:9]))
+            boosting_values += list(map(lambda x: {"key": x, "value" : st.number_input(f"{x}", value=boosts_values[x], min_value=0.01, on_change=utils.update_scoring_profile, kwargs=search_settings, key=x)}, boost_selections[6:9]))
 
 
     select = fe_select
