@@ -114,6 +114,17 @@ Example queries:
 -    girl yellow cardigan
 -    women white belted coat
 
+When running the application, you can use the UI to tweak the filters and boosts logic according to your needs.
+
+You can enable filtering and/or boosting using the menu on the left-hand side or modify the threshold for each field in the "Threshold definition" section.
+
+In the following image, you can compare the results on the left-hand side ("Keyword-based Search") with those on the right-hand side ("Search with Semantic Understanding"), using the following settings:
+-   Boost on extracted colors with confidence > 0.85 (light blue marker)
+-   Filter on extracted gender with confidence > 0.75 (green marker)
+
+![semantic-understanding](/doc-images/boosting-filters-example.png)
+
+The UI provides a sample playground to tweak the threshold parameters and define your own logic to be embedded in your application query layer.
 
 ## How to use embeddings
 The core of the repo is using the _encode_ function from __sentence_transformers__ library and _get_embeddings_ from __openai__ library to compute the embedding representations of the product attributes available in a sample product catalog.
